@@ -2,6 +2,7 @@
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
+//This works so try and figure it out okay yeah bye"putInBackpack( pencil);"
 
 
 public class Backpack {
@@ -11,14 +12,23 @@ public class Backpack {
 	private Textbook textbook;
 
 	Backpack(){
+
 		System.out.println("Nice Backpack");
 	}
 	
 	public static void main (String[] args){
 		/* Your mission is to get to school, but first you need to get all of your supplies into your backpack. */
-
-
-
+Backpack be = new Backpack();
+Pencil notpen = new Pencil();
+Ruler ed = new Ruler();
+Textbook ben = new Textbook();
+notpen.write("heyyyy");
+ed.measure();
+ben.read();
+be.putInBackpack(notpen);
+be.putInBackpack(ed);
+be.putInBackpack(ben);
+be.goToSchool();
 	}
 	
 	public void putInBackpack(Supply supply){
@@ -37,6 +47,7 @@ public class Backpack {
 	}
 	
 	public void goToSchool(){
+ 
 		if(pencil == null || ruler == null || textbook == null){
 			System.err.println("You are not ready for School");
 		}else{
@@ -60,7 +71,6 @@ class Pencil extends Supply {
 		System.out.println(writing);
 	}
 }
-
 
 class Ruler extends Supply {
 
